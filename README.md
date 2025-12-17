@@ -1,6 +1,9 @@
 ## Project Structure Overview
 
 This project follows a standard MMPretrain-based workflow for fine-grained image classification.
+Due to GitHub file size limitations, large datasets and training artifacts
+(e.g., `Archive/` and `work_dirs/`) are not included in this repository.
+
 
 - **Archive/**  
   Contains the dataset used in this project, including **training**, **validation**, and **test** sets.  
@@ -10,6 +13,8 @@ This project follows a standard MMPretrain-based workflow for fine-grained image
   The main project directory based on the MMPretrain framework, which provides implementations
   of various visual backbone models.  
   In this project, **ResNeXt-50** is used as the primary backbone for training and evaluation.
+
+  configs/resnext/**my_resnext50_folder.py**
 
 - **work_dirs/**  
   Stores experiment outputs generated during training.  
