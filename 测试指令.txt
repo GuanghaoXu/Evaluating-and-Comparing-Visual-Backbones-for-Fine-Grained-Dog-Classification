@@ -1,0 +1,11 @@
+激活环境：conda activate mmpretrain
+
+开始训练：python .\tools\train.py .\configs\resnext\my_resnext50_folder.py --work-dir .\work_dirs\resnext50_mydata
+
+使用训练好的模型测试：python .\tools\test.py .\configs\resnext\my_resnext50_folder.py .\work_dirs\resnext50_mydata\epoch_18.pth --out .\work_dirs\resnext50_mydata\test_preds.pkl --out-item pred
+
+pkl生成混淆矩阵与xlsx：python .\parse_preds.py --input ".\work_dirs\resnext50_mydata\test_preds.pkl" --out ".\work_dirs\resnext50_mydata\test_preds.csv" --excel ".\work_dirs\resnext50_mydata\test_preds.xlsx" --confusion ".\work_dirs\resnext50_mydata\confusion_matrix.csv"
+
+
+
+Loss 衡量“整体置信度（模型觉得是什么）与真值的差距”，Accuracy 只看“对错”
