@@ -1,3 +1,33 @@
+## Project Structure Overview
+
+This project follows a standard MMPretrain-based workflow for fine-grained image classification.
+
+- **Archive/**  
+  Contains the dataset used in this project, including **training**, **validation**, and **test** sets.  
+  The dataset covers **120 dog breed categories**, organized in a folder-per-class structure.
+
+- **mmpretrain/**  
+  The main project directory based on the MMPretrain framework, which provides implementations
+  of various visual backbone models.  
+  In this project, **ResNeXt-50** is used as the primary backbone for training and evaluation.
+
+- **work_dirs/**  
+  Stores experiment outputs generated during training.  
+  The `resnext50_mydata` directory contains multiple timestamped experiment runs, including
+  training logs, checkpoints, and evaluation records.
+
+- **tools/**  
+  Includes scripts for model testing, result analysis, and visualization.
+  Custom testing and visualization utilities are implemented in this directory.
+
+- **visualization/**  
+  Contains visualization outputs such as Grad-CAM, Integrated Gradients, and other result figures
+  used for model interpretation and analysis.
+
+Due to GitHub file size limitations, large datasets and trained model checkpoints are not included
+in this repository. Only configuration files, scripts, and lightweight visualization results are provided.
+
+
 <div align="center">
 
 <img src="resources/mmpt-logo.png" width="600"/>
